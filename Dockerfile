@@ -32,4 +32,6 @@ COPY --from=build --chown=node:node /usr/app/dist/ /usr/app/dist/
 
 USER node
 
+RUN mkdir /usr/app/conf.d
+
 CMD ["node", "dist/src/index.js"]
