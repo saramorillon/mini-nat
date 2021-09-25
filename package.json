@@ -1,0 +1,36 @@
+{
+  "name": "mini-nat",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Sara Morillon"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "start": "node dist/src/index.js",
+    "start:dev": "nodemon -r dotenv/config --inspect=9999 src/index.ts",
+    "test": "jest --runInBand",
+    "format": "prettier 'src/**/*.{ts,tsx}' --write",
+    "lint": "eslint 'src/**/*.{ts,tsx}'"
+  },
+  "devDependencies": {
+    "@mini-utils/eslint-config-typescript": "^1.0.4",
+    "@types/jest": "^27.0.2",
+    "@types/node": "^16.10.0",
+    "@typescript-eslint/eslint-plugin": "^4.31.2",
+    "@typescript-eslint/parser": "^4.31.2",
+    "dotenv": "^10.0.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-jest": "^24.4.2",
+    "jest": "^27.2.1",
+    "nodemon": "^2.0.13",
+    "prettier": "^2.4.1",
+    "ts-jest": "^27.0.5",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.3"
+  },
+  "dependencies": {
+    "envalid": "^7.2.1"
+  }
+}
