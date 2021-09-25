@@ -27,8 +27,8 @@ RUN yarn install --frozen-lockfile --force --production --ignore-scripts --prefe
 # RELEASE
 FROM base as release
 
-COPY --from=dependencies --chown=node:node /app/node_modules/ /app/node_modules/
-COPY --from=build --chown=node:node /app/dist/ /app/dist/
+COPY --from=dependencies --chown=node:node /usr/app/node_modules/ /usr/app/node_modules/
+COPY --from=build --chown=node:node /usr/app/dist/ /usr/app/dist/
 
 USER node
 
