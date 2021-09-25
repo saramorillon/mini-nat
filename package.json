@@ -13,7 +13,7 @@
     "test": "jest --runInBand",
     "format": "prettier 'src/**/*.{ts,tsx}' --write",
     "lint": "eslint 'src/**/*.{ts,tsx}'",
-    "docker:build": "docker build -t saramorillon/mini-nat -f ../Dockerfile ..",
+    "docker:build": "docker build -t saramorillon/mini-nat .",
     "docker:tag": "docker image tag saramorillon/mini-nat saramorillon/mini-nat:$npm_package_version",
     "docker:push": "docker push -a saramorillon/mini-nat"
   },
