@@ -30,8 +30,8 @@ FROM base as release
 COPY --from=dependencies --chown=node:node /usr/app/node_modules/ /usr/app/node_modules/
 COPY --from=build --chown=node:node /usr/app/dist/ /usr/app/dist/
 
-USER node
-
 RUN mkdir /usr/app/conf.d
+
+USER node
 
 CMD ["node", "dist/src/index.js"]
