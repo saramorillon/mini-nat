@@ -34,4 +34,4 @@ RUN mkdir /usr/app/conf.d
 
 USER node
 
-CMD ["node", "dist/src/index.js"]
+CMD ["node", "dist/index.js"]
